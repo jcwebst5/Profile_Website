@@ -8,126 +8,658 @@
 
     <title>Justin Webster | Portfolio</title>
 
-    <!-- Connects this HTML file to style.css -->
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* ========================================
+           RESET
+        ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #ffffff;
+            color: #111111;
+        }
+
+
+
+        /* ========================================
+           HERO SECTION
+        ======================================== */
+
+        .hero {
+            min-height: 100vh;
+
+            background: linear-gradient(
+                135deg,
+                #2563eb 0%,
+                #4f46e5 50%,
+                #7c3aed 100%
+            );
+
+            color: white;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 130px 30px 80px;
+        }
+
+
+
+        /* ========================================
+           NAVIGATION
+        ======================================== */
+
+        .navbar {
+            position: absolute;
+
+            top: 0;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: 86%;
+            max-width: 1400px;
+
+            padding-top: 35px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo {
+            color: white;
+
+            font-size: 1.6rem;
+            font-weight: 800;
+
+            text-decoration: none;
+        }
+
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+
+            gap: 35px;
+        }
+
+
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+
+            text-decoration: none;
+
+            font-size: 1rem;
+
+            transition: 0.2s;
+        }
+
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+
+
+        /* ========================================
+           HERO CONTENT
+        ======================================== */
+
+        .hero-content {
+            width: 100%;
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+        /* ========================================
+           PROFILE PICTURE
+        ======================================== */
+
+        .profile-pic {
+            width: 220px;
+            height: 220px;
+
+            display: block;
+
+            object-fit: cover;
+            object-position: center;
+
+            border: 5px solid white;
+
+            border-radius: 24px;
+
+            box-shadow: 0 20px 50px rgba(0,0,0,0.20);
+
+            margin-bottom: 32px;
+        }
+
+
+
+        /* ========================================
+           HELLO TEXT
+        ======================================== */
+
+        .intro {
+            font-size: 0.85rem;
+
+            font-weight: 700;
+
+            letter-spacing: 5px;
+
+            color: rgba(255,255,255,0.7);
+
+            margin-bottom: 12px;
+        }
+
+
+
+        /* ========================================
+           NAME
+        ======================================== */
+
+        .hero h1 {
+            font-size: 4.3rem;
+
+            line-height: 1;
+
+            font-weight: 800;
+
+            margin-bottom: 26px;
+        }
+
+
+
+        /* ========================================
+           ROLES
+        ======================================== */
+
+        .roles {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            font-size: 1.2rem;
+
+            margin-bottom: 30px;
+        }
+
+
+        .plus {
+            color: #fde047;
+
+            font-weight: 800;
+        }
+
+
+
+        /* ========================================
+           DESCRIPTION
+        ======================================== */
+
+        .description {
+            width: 100%;
+            max-width: 760px;
+
+            font-size: 1.05rem;
+
+            line-height: 1.8;
+
+            color: rgba(255,255,255,0.9);
+
+            margin-bottom: 38px;
+        }
+
+
+
+        /* ========================================
+           BUTTON
+        ======================================== */
+
+        .work-button {
+            display: inline-block;
+
+            background: white;
+
+            color: #4f46e5;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            font-size: 1rem;
+
+            padding: 18px 30px;
+
+            border-radius: 999px;
+
+            transition: 0.2s;
+        }
+
+
+        .work-button:hover {
+            transform: translateY(-3px);
+
+            box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+        }
+
+
+
+        /* ========================================
+           NORMAL SECTIONS
+        ======================================== */
+
+        .section {
+            padding: 110px 10%;
+
+            min-height: 60vh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+        }
+
+
+        .section-inner {
+            width: 100%;
+
+            max-width: 1100px;
+
+            margin: 0 auto;
+        }
+
+
+        .section h2 {
+            font-size: 3rem;
+
+            margin-bottom: 25px;
+        }
+
+
+        .section-text {
+            max-width: 700px;
+
+            font-size: 1.1rem;
+
+            line-height: 1.8;
+
+            color: #555;
+        }
+
+
+
+        /* ========================================
+           SKILLS
+        ======================================== */
+
+        #skills {
+            background: #f6f7fb;
+        }
+
+
+        .skill-container {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 25px;
+
+            margin-top: 35px;
+        }
+
+
+        .skill-card {
+            flex: 1;
+
+            min-width: 220px;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+
+        .skill-card h3 {
+            font-size: 1.3rem;
+
+            margin-bottom: 12px;
+        }
+
+
+        .skill-card p {
+            color: #666;
+
+            line-height: 1.7;
+        }
+
+
+
+        /* ========================================
+           WORK
+        ======================================== */
+
+        #work {
+            background: white;
+        }
+
+
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 700px) {
+
+            .hero {
+                padding: 120px 20px 70px;
+            }
+
+
+            .navbar {
+                width: calc(100% - 40px);
+
+                padding-top: 25px;
+            }
+
+
+            .nav-links {
+                gap: 16px;
+            }
+
+
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+
+
+            .profile-pic {
+                width: 180px;
+                height: 180px;
+            }
+
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+
+            .roles {
+                font-size: 1rem;
+            }
+
+
+            .description {
+                font-size: 1rem;
+            }
+
+
+            .section {
+                padding: 80px 25px;
+            }
+
+
+            .section h2 {
+                font-size: 2.4rem;
+            }
+
+
+            .skill-container {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+
 </head>
+
 
 
 <body>
 
-    <!-- =========================
-         HERO SECTION
-    ========================== -->
 
-    <section class="hero">
+    <!-- ========================================
+         HERO
+    ========================================= -->
 
-        <!-- Navigation -->
+    <section class="hero" id="home">
+
+
+        <!-- NAVIGATION -->
+
         <nav class="navbar">
 
-            <a href="#home" class="logo">JW.</a>
+            <a class="logo" href="#home">
+                JW.
+            </a>
+
 
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#work">Work</a>
+
+                <a href="#about">
+                    About
+                </a>
+
+                <a href="#skills">
+                    Skills
+                </a>
+
+                <a href="#work">
+                    Work
+                </a>
+
             </div>
 
         </nav>
 
 
-        <!-- Main Hero Content -->
-        <div class="hero-content" id="home">
 
-            <!-- PROFILE IMAGE -->
-            <!--
-                IMPORTANT:
-                Profile_Pic_YURRRR.jpg must be in the SAME
-                folder as index.html.
-            -->
+        <!-- HERO CONTENT -->
+
+        <div class="hero-content">
+
+
+            <!-- PROFILE PICTURE -->
+
             <img
-                src="./Profile_Pic_YURRRR.jpg"
-                alt="Justin Webster"
                 class="profile-pic"
+                src="Profile_Pic_YURRRR.jpg"
+                alt="Justin Webster"
             >
 
 
-            <p class="intro">HELLO, I'M</p>
+
+            <!-- INTRO -->
+
+            <p class="intro">
+                HELLO, I'M
+            </p>
 
 
-            <h1>Justin Webster</h1>
 
+            <!-- NAME -->
+
+            <h1>
+                Justin Webster
+            </h1>
+
+
+
+            <!-- ROLES -->
 
             <div class="roles">
 
-                <span>Computer Science Student</span>
+                <span>
+                    Computer Science Student
+                </span>
 
-                <span class="plus">+</span>
+                <span class="plus">
+                    +
+                </span>
 
-                <span>Graphic Designer</span>
+                <span>
+                    Graphic Designer
+                </span>
 
-                <span class="plus">+</span>
+                <span class="plus">
+                    +
+                </span>
 
-                <span>Music Producer</span>
+                <span>
+                    Music Producer
+                </span>
 
             </div>
 
 
+
+            <!-- DESCRIPTION -->
+
             <p class="description">
+
                 I love combining creativity and technology through graphic design,
                 digital artwork, music production, audio engineering, and web
                 development. Every project is an opportunity to learn something
                 new and create something meaningful.
+
             </p>
 
 
-            <a href="#work" class="work-button">
+
+            <!-- BUTTON -->
+
+            <a class="work-button" href="#work">
+
                 View My Work ↓
+
             </a>
+
 
         </div>
 
     </section>
 
 
-    <!-- =========================
+
+
+    <!-- ========================================
          ABOUT
-    ========================== -->
+    ========================================= -->
 
     <section class="section" id="about">
 
-        <h2>About Me</h2>
+        <div class="section-inner">
 
-        <p>
-            I'm a computer science student and creative who enjoys exploring
-            the space between technology, design, and music.
-        </p>
+            <h2>
+                About Me
+            </h2>
+
+
+            <p class="section-text">
+
+                I'm a computer science student and creative who enjoys exploring
+                the space between technology, design, and music.
+
+            </p>
+
+        </div>
 
     </section>
 
 
-    <!-- =========================
+
+
+    <!-- ========================================
          SKILLS
-    ========================== -->
+    ========================================= -->
 
     <section class="section" id="skills">
 
-        <h2>Skills</h2>
+        <div class="section-inner">
 
-        <div class="skill-container">
+            <h2>
+                Skills
+            </h2>
 
-            <div class="skill-card">
-                <h3>Development</h3>
-                <p>HTML, CSS, programming, and web development.</p>
-            </div>
 
-            <div class="skill-card">
-                <h3>Design</h3>
-                <p>Graphic design, digital artwork, and visual experimentation.</p>
-            </div>
+            <div class="skill-container">
 
-            <div class="skill-card">
-                <h3>Music</h3>
-                <p>Music production, audio engineering, and sound design.</p>
+
+                <div class="skill-card">
+
+                    <h3>
+                        Development
+                    </h3>
+
+                    <p>
+                        HTML, CSS, programming, and web development.
+                    </p>
+
+                </div>
+
+
+
+                <div class="skill-card">
+
+                    <h3>
+                        Design
+                    </h3>
+
+                    <p>
+                        Graphic design, digital artwork, and visual experimentation.
+                    </p>
+
+                </div>
+
+
+
+                <div class="skill-card">
+
+                    <h3>
+                        Music
+                    </h3>
+
+                    <p>
+                        Music production, audio engineering, and sound design.
+                    </p>
+
+                </div>
+
+
             </div>
 
         </div>
@@ -135,19 +667,29 @@
     </section>
 
 
-    <!-- =========================
+
+
+    <!-- ========================================
          WORK
-    ========================== -->
+    ========================================= -->
 
     <section class="section" id="work">
 
-        <h2>My Work</h2>
+        <div class="section-inner">
 
-        <p>
-            Projects coming soon.
-        </p>
+            <h2>
+                My Work
+            </h2>
+
+
+            <p class="section-text">
+                Projects coming soon.
+            </p>
+
+        </div>
 
     </section>
+
 
 </body>
 
