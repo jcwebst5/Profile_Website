@@ -1,163 +1,390 @@
-<section id="home" class="hero">
+<!DOCTYPE html>
+<html lang="en">
 
-    <img src="Profile_Pic_YURRRR.jpg"
-         alt="Justin Webster"
-         class="profile-pic">
+<head>
+    <meta charset="UTF-8">
 
-    <h1>Justin Webster</h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <h3>
-        Computer Science Student • Graphic Designer • Music Producer
-    </h3>
+    <title>Justin Webster | Portfolio</title>
 
-    <p>
-        I love combining creativity and technology through graphic design,
-        digital artwork, music production, audio engineering, and web
-        development. Every project is an opportunity to learn something
-        new and create something meaningful.
-    </p>
+    <!-- Connects this page to style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <div class="hero-buttons">
 
-        <a href="#projects" class="button">
-            View My Work
+<body>
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <nav class="navbar">
+
+        <a class="logo" href="#home">JW.</a>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Work</a>
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <header class="hero" id="home">
+
+        <div class="hero-content">
+
+            <!--
+                IMPORTANT:
+                Put your photo inside an "images" folder.
+
+                Example:
+                portfolio/
+                ├── index.html
+                ├── style.css
+                └── images/
+                    └── profile.jpg
+            -->
+
+            <img
+                class="profile-pic"
+                src="images/profile.jpg"
+                alt="Portrait of Justin Webster"
+            >
+
+
+            <p class="eyebrow">
+                HELLO, I'M
+            </p>
+
+
+            <h1>
+                Justin Webster
+            </h1>
+
+
+            <h2>
+                Computer Science Student
+                <span>+</span>
+                Graphic Designer
+                <span>+</span>
+                Music Producer
+            </h2>
+
+
+            <p class="hero-description">
+                I love combining creativity and technology through graphic
+                design, digital artwork, music production, audio engineering,
+                and web development. Every project is an opportunity to learn
+                something new and create something meaningful.
+            </p>
+
+
+            <a class="button" href="#projects">
+                View My Work ↓
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+
+    <main>
+
+        <section class="about section" id="about">
+
+            <div class="section-inner">
+
+                <p class="section-number">01</p>
+
+                <h2 class="section-title">
+                    About Me
+                </h2>
+
+
+                <div class="about-layout">
+
+                    <h3>
+                        Creativity has always been a huge part of who I am.
+                    </h3>
+
+
+                    <p>
+                        Hi! My name is Justin Webster, and I'm a Computer
+                        Science student at Arizona State University.
+                        Whether I'm designing graphics, creating digital
+                        artwork, producing music, engineering audio, or
+                        building websites, I enjoy bringing ideas to life
+                        through technology.
+                        <br><br>
+                        This portfolio showcases both my creative interests
+                        and my growing skills in front-end web development.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             SKILLS
+        ====================================== -->
+
+        <section class="skills section" id="skills">
+
+            <div class="section-inner">
+
+                <p class="section-number">02</p>
+
+                <h2 class="section-title">
+                    Creative Skills
+                </h2>
+
+
+                <div class="skill-list">
+
+
+                    <article class="skill">
+
+                        <span class="skill-number">01</span>
+
+                        <div>
+                            <h3>Graphic Design</h3>
+
+                            <p>
+                                Creating visual designs, branding,
+                                and digital artwork.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="skill">
+
+                        <span class="skill-number">02</span>
+
+                        <div>
+                            <h3>Music Production</h3>
+
+                            <p>
+                                Producing original music using modern
+                                digital audio software.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="skill">
+
+                        <span class="skill-number">03</span>
+
+                        <div>
+                            <h3>Audio Engineering</h3>
+
+                            <p>
+                                Recording, mixing, and improving audio
+                                quality for projects.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="skill">
+
+                        <span class="skill-number">04</span>
+
+                        <div>
+                            <h3>Digital Art</h3>
+
+                            <p>
+                                Creating illustrations and digital artwork
+                                for personal creative projects.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="skill">
+
+                        <span class="skill-number">05</span>
+
+                        <div>
+                            <h3>Web Development</h3>
+
+                            <p>
+                                Learning HTML and CSS while building
+                                responsive websites.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             PROJECTS
+        ====================================== -->
+
+        <section class="projects section" id="projects">
+
+            <div class="section-inner">
+
+                <p class="section-number">03</p>
+
+                <h2 class="section-title">
+                    Featured Projects
+                </h2>
+
+
+                <div class="project-list">
+
+
+                    <article class="project-card">
+
+                        <div class="project-icon">
+                            ✿
+                        </div>
+
+                        <div class="project-info">
+
+                            <p class="project-type">
+                                DESIGN
+                            </p>
+
+                            <h3>
+                                Graphic Design Portfolio
+                            </h3>
+
+                            <p>
+                                A growing collection of logos,
+                                branding concepts, promotional graphics,
+                                and digital artwork.
+                            </p>
+
+                        </div>
+
+                        <span class="arrow">↗</span>
+
+                    </article>
+
+
+
+                    <article class="project-card">
+
+                        <div class="project-icon">
+                            ♫
+                        </div>
+
+                        <div class="project-info">
+
+                            <p class="project-type">
+                                AUDIO
+                            </p>
+
+                            <h3>
+                                Music Production
+                            </h3>
+
+                            <p>
+                                Original music created through digital
+                                production, recording, mixing,
+                                and sound design.
+                            </p>
+
+                        </div>
+
+                        <span class="arrow">↗</span>
+
+                    </article>
+
+
+
+                    <article class="project-card">
+
+                        <div class="project-icon">
+                            ◫
+                        </div>
+
+                        <div class="project-info">
+
+                            <p class="project-type">
+                                WEB
+                            </p>
+
+                            <h3>
+                                Personal Portfolio Website
+                            </h3>
+
+                            <p>
+                                A responsive website built with HTML
+                                and CSS to showcase my creative work
+                                and technical skills.
+                            </p>
+
+                        </div>
+
+                        <span class="arrow">↗</span>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <p>
+            Designed + built by Justin Webster.
+        </p>
+
+        <a href="#home">
+            Back to top ↑
         </a>
 
-    </div>
-
-</section>
-
-<section id="about">
-
-    <h2>About Me</h2>
-
-    <p>
-
-        Hi! My name is Justin Webster, and I'm a Computer Science student
-        at Arizona State University. Creativity has always been a huge
-        part of who I am. Whether I'm designing graphics, creating digital
-        artwork, producing music, engineering audio, or building websites,
-        I enjoy bringing ideas to life through technology.
-
-        This portfolio showcases both my creative interests and my growing
-        skills in front-end web development.
-
-    </p>
-
-</section>
-
-<section id="skills">
-
-    <h2>Creative Skills</h2>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <i class="fa-solid fa-palette"></i>
-
-            <h3>Graphic Design</h3>
-
-            <p>
-                Creating visual designs, branding, and digital artwork.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <i class="fa-solid fa-music"></i>
-
-            <h3>Music Production</h3>
-
-            <p>
-                Producing original music using modern digital audio software.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <i class="fa-solid fa-sliders"></i>
-
-            <h3>Audio Engineering</h3>
-
-            <p>
-                Recording, mixing, and improving audio quality for projects.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <i class="fa-solid fa-paintbrush"></i>
-
-            <h3>Digital Art</h3>
-
-            <p>
-                Creating illustrations and digital artwork for personal
-                creative projects.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <i class="fa-solid fa-code"></i>
-
-            <h3>Web Development</h3>
-
-            <p>
-                Learning HTML and CSS while building responsive websites.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="projects">
-
-    <h2>Featured Projects</h2>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <h3>🎨 Graphic Design Portfolio</h3>
-
-            <p>
-                A growing collection of logos, branding concepts,
-                promotional graphics, and digital artwork.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>🎵 Music Production</h3>
-
-            <p>
-                Original music created through digital production,
-                recording, mixing, and sound design.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h3>💻 Personal Portfolio Website</h3>
-
-            <p>
-                A responsive website built with HTML and CSS to showcase my
-                creative work and technical skills.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+    </footer>
 
 
+</body>
+
+</html>
