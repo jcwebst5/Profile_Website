@@ -1,382 +1,286 @@
-<link rel="stylesheet" href="style.css?v=2">
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Justin Webster | Portfolio</title>
 
-    <!-- Connects this page to style.css -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Connects this page to your CSS file -->
+    <!-- ?v=2 helps force the browser to load the newest CSS -->
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
-
 
 <body>
 
-    <!-- =========================================
+    <!-- =========================
          NAVIGATION
-    ========================================== -->
-
+    ========================== -->
     <nav class="navbar">
 
-        <a class="logo" href="#home">JW.</a>
+        <div class="nav-container">
 
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Work</a>
+            <a href="#home" class="logo">
+                JW
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#contact">Contact</a>
+            </div>
+
         </div>
 
     </nav>
 
 
-
-    <!-- =========================================
+    <!-- =========================
          HERO
-    ========================================== -->
-
+    ========================== -->
     <header class="hero" id="home">
 
-        <div class="hero-content">
+        <!-- YOUR PROFILE PICTURE -->
+        <img
+            src="Profile_Pic_YURRRR.jpg"
+            alt="Justin Webster"
+            class="profile-pic"
+        >
 
-            <!--
-                IMPORTANT:
-                Put your photo inside an "images" folder.
+        <h1>Justin Webster</h1>
 
-                Example:
-                portfolio/
-                ├── index.html
-                ├── style.css
-                └── images/
-                    └── profile.jpg
-            -->
+        <h3>Designer • Creator • Student</h3>
 
-            <img
-                class="profile-pic"
-                <img src="Profile_Pic_YURRRR.jpg" alt="Profile picture" class="profile-pic">
-                alt="Portrait of Justin Webster"
-            >
+        <p>
+            I like making things that feel thoughtful, creative,
+            and a little unexpected. This website is a collection
+            of my work, ideas, experiments, and things I'm learning
+            along the way.
+        </p>
 
-
-            <p class="eyebrow">
-                HELLO, I'M
-            </p>
-
-
-            <h1>
-                Justin Webster
-            </h1>
-
-
-            <h2>
-                Computer Science Student
-                <span>+</span>
-                Graphic Designer
-                <span>+</span>
-                Music Producer
-            </h2>
-
-
-            <p class="hero-description">
-                I love combining creativity and technology through graphic
-                design, digital artwork, music production, audio engineering,
-                and web development. Every project is an opportunity to learn
-                something new and create something meaningful.
-            </p>
-
-
-            <a class="button" href="#projects">
-                View My Work ↓
-            </a>
-
-        </div>
+        <a href="#work" class="hero-button">
+            See My Work ↓
+        </a>
 
     </header>
 
 
-
-    <!-- =========================================
+    <!-- =========================
          ABOUT
-    ========================================== -->
+    ========================== -->
+    <section class="section about" id="about">
 
-    <main>
+        <div class="section-container">
 
-        <section class="about section" id="about">
+            <p class="section-number">
+                01
+            </p>
 
-            <div class="section-inner">
+            <h2>About Me</h2>
 
-                <p class="section-number">01</p>
+            <div class="about-content">
 
-                <h2 class="section-title">
-                    About Me
-                </h2>
+                <p>
+                    Hey, I'm Justin.
+                </p>
+
+                <p>
+                    I'm interested in creativity, design, technology,
+                    and figuring out how ideas can turn into things
+                    people can actually see, use, and experience.
+                </p>
+
+                <p>
+                    I'm still learning, experimenting, and developing
+                    my own style. This portfolio isn't meant to feel
+                    like a perfectly polished corporate website.
+                    It's more like a notebook — a place where I can
+                    collect what I'm making and watch it evolve.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
-                <div class="about-layout">
+    <!-- =========================
+         WORK
+    ========================== -->
+    <section class="section work" id="work">
 
-                    <h3>
-                        Creativity has always been a huge part of who I am.
-                    </h3>
+        <div class="section-container">
 
+            <p class="section-number">
+                02
+            </p>
+
+            <h2>Selected Work</h2>
+
+            <p class="section-intro">
+                A few things I've made, explored, or experimented with.
+            </p>
+
+
+            <div class="projects">
+
+                <!-- PROJECT 1 -->
+                <article class="project-card">
+
+                    <div class="project-number">
+                        01
+                    </div>
+
+                    <h3>Project One</h3>
 
                     <p>
-                        Hi! My name is Justin Webster, and I'm a Computer
-                        Science student at Arizona State University.
-                        Whether I'm designing graphics, creating digital
-                        artwork, producing music, engineering audio, or
-                        building websites, I enjoy bringing ideas to life
-                        through technology.
-                        <br><br>
-                        This portfolio showcases both my creative interests
-                        and my growing skills in front-end web development.
+                        A short description of this project can go here.
+                        Explain what you made, why you made it, or what
+                        you learned while working on it.
                     </p>
 
+                    <a href="#">
+                        View Project →
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 2 -->
+                <article class="project-card">
+
+                    <div class="project-number">
+                        02
+                    </div>
+
+                    <h3>Project Two</h3>
+
+                    <p>
+                        This could be another design project, creative
+                        experiment, school project, or something you're
+                        currently building.
+                    </p>
+
+                    <a href="#">
+                        View Project →
+                    </a>
+
+                </article>
+
+
+                <!-- PROJECT 3 -->
+                <article class="project-card">
+
+                    <div class="project-number">
+                        03
+                    </div>
+
+                    <h3>Project Three</h3>
+
+                    <p>
+                        Not everything here has to be finished. This
+                        portfolio can also show ideas, experiments,
+                        sketches, and things that are still evolving.
+                    </p>
+
+                    <a href="#">
+                        View Project →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CURRENTLY
+    ========================== -->
+    <section class="section currently">
+
+        <div class="section-container">
+
+            <p class="section-number">
+                03
+            </p>
+
+            <h2>Currently...</h2>
+
+            <div class="currently-list">
+
+                <div class="currently-item">
+                    <span>✦</span>
+
+                    <p>
+                        Learning more about HTML and CSS.
+                    </p>
+                </div>
+
+                <div class="currently-item">
+                    <span>✦</span>
+
+                    <p>
+                        Building this portfolio from scratch.
+                    </p>
+                </div>
+
+                <div class="currently-item">
+                    <span>✦</span>
+
+                    <p>
+                        Experimenting with design and figuring out
+                        what feels like me.
+                    </p>
                 </div>
 
             </div>
 
-        </section>
+        </div>
 
+    </section>
 
 
-        <!-- =====================================
-             SKILLS
-        ====================================== -->
+    <!-- =========================
+         CONTACT
+    ========================== -->
+    <section class="section contact" id="contact">
 
-        <section class="skills section" id="skills">
+        <div class="section-container">
 
-            <div class="section-inner">
+            <p class="section-number">
+                04
+            </p>
 
-                <p class="section-number">02</p>
+            <h2>Let's Talk.</h2>
 
-                <h2 class="section-title">
-                    Creative Skills
-                </h2>
+            <p>
+                Have an idea, question, opportunity, or just want
+                to say hi? I'd love to hear from you.
+            </p>
 
+            <!-- You can replace this later with your real email -->
+            <a href="mailto:your@email.com" class="contact-button">
+                Say Hello →
+            </a>
 
-                <div class="skill-list">
+        </div>
 
+    </section>
 
-                    <article class="skill">
 
-                        <span class="skill-number">01</span>
-
-                        <div>
-                            <h3>Graphic Design</h3>
-
-                            <p>
-                                Creating visual designs, branding,
-                                and digital artwork.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-
-                    <article class="skill">
-
-                        <span class="skill-number">02</span>
-
-                        <div>
-                            <h3>Music Production</h3>
-
-                            <p>
-                                Producing original music using modern
-                                digital audio software.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-
-                    <article class="skill">
-
-                        <span class="skill-number">03</span>
-
-                        <div>
-                            <h3>Audio Engineering</h3>
-
-                            <p>
-                                Recording, mixing, and improving audio
-                                quality for projects.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-
-                    <article class="skill">
-
-                        <span class="skill-number">04</span>
-
-                        <div>
-                            <h3>Digital Art</h3>
-
-                            <p>
-                                Creating illustrations and digital artwork
-                                for personal creative projects.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-
-                    <article class="skill">
-
-                        <span class="skill-number">05</span>
-
-                        <div>
-                            <h3>Web Development</h3>
-
-                            <p>
-                                Learning HTML and CSS while building
-                                responsive websites.
-                            </p>
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =====================================
-             PROJECTS
-        ====================================== -->
-
-        <section class="projects section" id="projects">
-
-            <div class="section-inner">
-
-                <p class="section-number">03</p>
-
-                <h2 class="section-title">
-                    Featured Projects
-                </h2>
-
-
-                <div class="project-list">
-
-
-                    <article class="project-card">
-
-                        <div class="project-icon">
-                            ✿
-                        </div>
-
-                        <div class="project-info">
-
-                            <p class="project-type">
-                                DESIGN
-                            </p>
-
-                            <h3>
-                                Graphic Design Portfolio
-                            </h3>
-
-                            <p>
-                                A growing collection of logos,
-                                branding concepts, promotional graphics,
-                                and digital artwork.
-                            </p>
-
-                        </div>
-
-                        <span class="arrow">↗</span>
-
-                    </article>
-
-
-
-                    <article class="project-card">
-
-                        <div class="project-icon">
-                            ♫
-                        </div>
-
-                        <div class="project-info">
-
-                            <p class="project-type">
-                                AUDIO
-                            </p>
-
-                            <h3>
-                                Music Production
-                            </h3>
-
-                            <p>
-                                Original music created through digital
-                                production, recording, mixing,
-                                and sound design.
-                            </p>
-
-                        </div>
-
-                        <span class="arrow">↗</span>
-
-                    </article>
-
-
-
-                    <article class="project-card">
-
-                        <div class="project-icon">
-                            ◫
-                        </div>
-
-                        <div class="project-info">
-
-                            <p class="project-type">
-                                WEB
-                            </p>
-
-                            <h3>
-                                Personal Portfolio Website
-                            </h3>
-
-                            <p>
-                                A responsive website built with HTML
-                                and CSS to showcase my creative work
-                                and technical skills.
-                            </p>
-
-                        </div>
-
-                        <span class="arrow">↗</span>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =========================================
+    <!-- =========================
          FOOTER
-    ========================================== -->
-
+    ========================== -->
     <footer>
 
         <p>
-            Designed + built by Justin Webster.
+            Made by Justin Webster ✦ 2026
         </p>
 
         <a href="#home">
@@ -384,7 +288,6 @@
         </a>
 
     </footer>
-
 
 </body>
 
