@@ -2,18 +2,19 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Justin Webster | Portfolio</title>
+    <title>Justin Webster | Creative Portfolio</title>
 
 
     <style>
 
-        /* ========================================
-           RESET
-        ======================================== */
+        /* =========================================================
+           1. BASIC RESET
+        ========================================================= */
 
         * {
             margin: 0;
@@ -21,48 +22,102 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #ffffff;
+
+            background: #f7f7f2;
+
             color: #111111;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+            color: inherit;
         }
 
 
 
-        /* ========================================
-           HERO SECTION
-        ======================================== */
+        /* =========================================================
+           2. HERO
+        ========================================================= */
 
         .hero {
             min-height: 100vh;
 
-            background: linear-gradient(
-                135deg,
-                #2563eb 0%,
-                #4f46e5 50%,
-                #7c3aed 100%
-            );
+            background:
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(168, 85, 247, 0.45),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #2563eb 0%,
+                    #4f46e5 50%,
+                    #7c3aed 100%
+                );
 
             color: white;
 
             position: relative;
 
             display: flex;
-            align-items: center;
-            justify-content: center;
 
-            padding: 130px 30px 80px;
+            justify-content: center;
+            align-items: center;
+
+            padding: 140px 30px 90px;
+
+            overflow: hidden;
         }
 
 
 
-        /* ========================================
-           NAVIGATION
-        ======================================== */
+        /* Decorative background circles */
+
+        .hero-circle-one {
+            position: absolute;
+
+            width: 380px;
+            height: 380px;
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            border-radius: 50%;
+
+            left: -160px;
+            bottom: -120px;
+        }
+
+
+        .hero-circle-two {
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            border: 1px solid rgba(255,255,255,0.15);
+
+            border-radius: 50%;
+
+            right: 8%;
+            top: 18%;
+        }
+
+
+
+        /* =========================================================
+           3. NAVIGATION
+        ========================================================= */
 
         .navbar {
             position: absolute;
@@ -78,35 +133,38 @@
             padding-top: 35px;
 
             display: flex;
+
             justify-content: space-between;
             align-items: center;
+
+            z-index: 10;
         }
 
 
         .logo {
-            color: white;
-
             font-size: 1.6rem;
-            font-weight: 800;
+
+            font-weight: 900;
 
             text-decoration: none;
+
+            letter-spacing: -1px;
         }
 
 
         .nav-links {
             display: flex;
-            align-items: center;
 
             gap: 35px;
         }
 
 
         .nav-links a {
-            color: rgba(255,255,255,0.8);
+            color: rgba(255,255,255,0.75);
 
             text-decoration: none;
 
-            font-size: 1rem;
+            font-size: 0.95rem;
 
             transition: 0.2s;
         }
@@ -118,98 +176,121 @@
 
 
 
-        /* ========================================
-           HERO CONTENT
-        ======================================== */
+        /* =========================================================
+           4. HERO CONTENT
+        ========================================================= */
 
         .hero-content {
             width: 100%;
-            max-width: 900px;
 
-            margin: 0 auto;
+            max-width: 1000px;
 
             text-align: center;
 
             display: flex;
+
             flex-direction: column;
+
             align-items: center;
+
+            position: relative;
+
+            z-index: 2;
         }
 
 
 
-        /* ========================================
-           PROFILE PICTURE
-        ======================================== */
+        /* =========================================================
+           5. PROFILE PICTURE
+        ========================================================= */
+
+        .profile-wrapper {
+            position: relative;
+
+            margin-bottom: 34px;
+        }
+
 
         .profile-pic {
+            display: block;
+
             width: 220px;
             height: 220px;
 
-            display: block;
-
             object-fit: cover;
-            object-position: center;
+
+            border-radius: 25px;
 
             border: 5px solid white;
 
-            border-radius: 24px;
+            box-shadow:
+                0 25px 70px rgba(0,0,0,0.25);
 
-            box-shadow: 0 20px 50px rgba(0,0,0,0.20);
+            transform: rotate(-2deg);
+        }
 
-            margin-bottom: 32px;
+
+        .photo-note {
+            position: absolute;
+
+            right: -95px;
+            bottom: 15px;
+
+            font-family: Georgia, serif;
+
+            font-style: italic;
+
+            font-size: 0.85rem;
+
+            transform: rotate(-6deg);
+
+            color: rgba(255,255,255,0.8);
         }
 
 
 
-        /* ========================================
-           HELLO TEXT
-        ======================================== */
+        /* =========================================================
+           6. HERO TYPOGRAPHY
+        ========================================================= */
 
         .intro {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
 
-            font-weight: 700;
+            font-weight: 800;
 
-            letter-spacing: 5px;
+            letter-spacing: 6px;
 
-            color: rgba(255,255,255,0.7);
+            color: rgba(255,255,255,0.65);
 
             margin-bottom: 12px;
         }
 
 
-
-        /* ========================================
-           NAME
-        ======================================== */
-
         .hero h1 {
-            font-size: 4.3rem;
+            font-size: clamp(4rem, 7vw, 6.5rem);
 
-            line-height: 1;
+            line-height: 0.9;
 
-            font-weight: 800;
+            letter-spacing: -5px;
 
-            margin-bottom: 26px;
+            font-weight: 900;
+
+            margin-bottom: 30px;
         }
 
-
-
-        /* ========================================
-           ROLES
-        ======================================== */
 
         .roles {
             display: flex;
 
             justify-content: center;
+
             align-items: center;
 
             flex-wrap: wrap;
 
             gap: 12px;
 
-            font-size: 1.2rem;
+            font-size: 1.1rem;
 
             margin-bottom: 30px;
         }
@@ -218,230 +299,659 @@
         .plus {
             color: #fde047;
 
-            font-weight: 800;
+            font-weight: 900;
         }
 
 
-
-        /* ========================================
-           DESCRIPTION
-        ======================================== */
-
         .description {
-            width: 100%;
-            max-width: 760px;
+            max-width: 750px;
 
             font-size: 1.05rem;
 
             line-height: 1.8;
 
-            color: rgba(255,255,255,0.9);
+            color: rgba(255,255,255,0.85);
 
             margin-bottom: 38px;
         }
 
 
 
-        /* ========================================
-           BUTTON
-        ======================================== */
+        /* =========================================================
+           7. HERO BUTTONS
+        ========================================================= */
 
-        .work-button {
+        .hero-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 14px;
+        }
+
+
+        .button-primary,
+        .button-secondary {
             display: inline-block;
 
-            background: white;
+            padding: 17px 28px;
 
-            color: #4f46e5;
+            border-radius: 100px;
 
             text-decoration: none;
 
             font-weight: 700;
 
-            font-size: 1rem;
-
-            padding: 18px 30px;
-
-            border-radius: 999px;
-
-            transition: 0.2s;
+            transition: 0.2s ease;
         }
 
 
-        .work-button:hover {
-            transform: translateY(-3px);
+        .button-primary {
+            background: white;
 
-            box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+            color: #4f46e5;
+        }
+
+
+        .button-secondary {
+            border: 1px solid rgba(255,255,255,0.4);
+
+            color: white;
+        }
+
+
+        .button-primary:hover,
+        .button-secondary:hover {
+            transform: translateY(-4px);
         }
 
 
 
-        /* ========================================
-           NORMAL SECTIONS
-        ======================================== */
+        /* =========================================================
+           8. GENERAL SECTION STYLES
+        ========================================================= */
 
         .section {
-            padding: 110px 10%;
-
-            min-height: 60vh;
-
-            display: flex;
-            flex-direction: column;
-
-            justify-content: center;
+            padding: 130px 8%;
         }
 
 
         .section-inner {
             width: 100%;
 
-            max-width: 1100px;
+            max-width: 1250px;
 
             margin: 0 auto;
         }
 
 
-        .section h2 {
-            font-size: 3rem;
-
-            margin-bottom: 25px;
-        }
-
-
-        .section-text {
-            max-width: 700px;
-
-            font-size: 1.1rem;
-
-            line-height: 1.8;
-
-            color: #555;
-        }
-
-
-
-        /* ========================================
-           SKILLS
-        ======================================== */
-
-        #skills {
-            background: #f6f7fb;
-        }
-
-
-        .skill-container {
+        .section-label {
             display: flex;
 
+            align-items: center;
+
+            gap: 15px;
+
+            font-size: 0.75rem;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: #6366f1;
+
+            margin-bottom: 30px;
+        }
+
+
+        .section-label::after {
+            content: "";
+
+            width: 70px;
+
+            height: 1px;
+
+            background: #6366f1;
+        }
+
+
+        .big-heading {
+            font-size: clamp(3.2rem, 6vw, 6rem);
+
+            line-height: 0.95;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 45px;
+        }
+
+
+
+        /* =========================================================
+           9. ABOUT
+        ========================================================= */
+
+        .about {
+            background: #f7f7f2;
+        }
+
+
+        .about-layout {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 80px;
+        }
+
+
+        .about-statement {
+            flex: 1.3;
+
+            font-size: clamp(2rem, 4vw, 3.8rem);
+
+            font-weight: 700;
+
+            line-height: 1.1;
+
+            letter-spacing: -2px;
+        }
+
+
+        .about-statement span {
+            color: #6366f1;
+        }
+
+
+        .about-copy {
+            flex: 1;
+
+            max-width: 480px;
+
+            padding-top: 10px;
+        }
+
+
+        .about-copy p {
+            color: #555;
+
+            line-height: 1.9;
+
+            font-size: 1.05rem;
+
+            margin-bottom: 20px;
+        }
+
+
+        .tiny-note {
+            display: inline-block;
+
+            margin-top: 20px;
+
+            font-family: Georgia, serif;
+
+            font-style: italic;
+
+            transform: rotate(-2deg);
+
+            color: #6366f1;
+        }
+
+
+
+        /* =========================================================
+           10. SKILLS
+        ========================================================= */
+
+        .skills {
+            background: #111111;
+
+            color: white;
+        }
+
+
+        .skills .section-label {
+            color: #a5b4fc;
+        }
+
+
+        .skills .section-label::after {
+            background: #a5b4fc;
+        }
+
+
+        .skill-grid {
+            display: flex;
+
+            gap: 20px;
+
             flex-wrap: wrap;
-
-            gap: 25px;
-
-            margin-top: 35px;
         }
 
 
         .skill-card {
             flex: 1;
 
-            min-width: 220px;
+            min-width: 280px;
 
-            background: white;
+            min-height: 330px;
 
-            padding: 30px;
+            padding: 35px;
 
-            border-radius: 18px;
+            border: 1px solid #333;
 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border-radius: 22px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            transition: 0.25s ease;
+        }
+
+
+        .skill-card:hover {
+            background: #1b1b1b;
+
+            transform: translateY(-8px);
+
+            border-color: #6366f1;
+        }
+
+
+        .skill-number {
+            color: #777;
+
+            font-size: 0.8rem;
+
+            letter-spacing: 3px;
         }
 
 
         .skill-card h3 {
-            font-size: 1.3rem;
+            font-size: 2rem;
 
-            margin-bottom: 12px;
+            margin-bottom: 18px;
         }
 
 
         .skill-card p {
-            color: #666;
+            color: #aaa;
 
             line-height: 1.7;
         }
 
 
+        .skill-tags {
+            display: flex;
 
-        /* ========================================
-           WORK
-        ======================================== */
+            flex-wrap: wrap;
 
-        #work {
-            background: white;
+            gap: 8px;
+
+            margin-top: 25px;
+        }
+
+
+        .skill-tags span {
+            border: 1px solid #444;
+
+            border-radius: 100px;
+
+            padding: 8px 13px;
+
+            font-size: 0.75rem;
+
+            color: #ccc;
         }
 
 
 
-        /* ========================================
-           MOBILE
-        ======================================== */
+        /* =========================================================
+           11. WORK
+        ========================================================= */
 
-        @media (max-width: 700px) {
+        .work {
+            background: #f7f7f2;
+        }
 
-            .hero {
-                padding: 120px 20px 70px;
-            }
 
+        .work-intro {
+            max-width: 600px;
+
+            color: #555;
+
+            line-height: 1.8;
+
+            font-size: 1.05rem;
+
+            margin-top: -20px;
+
+            margin-bottom: 55px;
+        }
+
+
+        .project-grid {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 25px;
+        }
+
+
+        .project-card {
+            flex: 1 1 45%;
+
+            min-height: 400px;
+
+            border-radius: 25px;
+
+            padding: 35px;
+
+            text-decoration: none;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            overflow: hidden;
+
+            position: relative;
+
+            transition: 0.3s ease;
+        }
+
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+
+        .project-blue {
+            background: #315bea;
+
+            color: white;
+        }
+
+
+        .project-yellow {
+            background: #fde047;
+
+            color: #111;
+        }
+
+
+        .project-purple {
+            background: #7c3aed;
+
+            color: white;
+        }
+
+
+        .project-light {
+            background: #e8e8e2;
+
+            color: #111;
+        }
+
+
+        .project-type {
+            font-size: 0.75rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            opacity: 0.7;
+        }
+
+
+        .project-card h3 {
+            font-size: clamp(2rem, 4vw, 3.7rem);
+
+            line-height: 1;
+
+            letter-spacing: -2px;
+
+            max-width: 500px;
+        }
+
+
+        .project-bottom {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-end;
+
+            gap: 20px;
+        }
+
+
+        .project-bottom p {
+            max-width: 350px;
+
+            line-height: 1.6;
+
+            opacity: 0.8;
+        }
+
+
+        .arrow {
+            font-size: 2rem;
+
+            transition: 0.2s;
+        }
+
+
+        .project-card:hover .arrow {
+            transform: translate(5px, -5px);
+        }
+
+
+
+        /* =========================================================
+           12. CURRENTLY EXPLORING
+        ========================================================= */
+
+        .exploring {
+            background: #ffffff;
+        }
+
+
+        .explore-row {
+            border-top: 1px solid #ccc;
+
+            padding: 25px 0;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 30px;
+        }
+
+
+        .explore-row:last-child {
+            border-bottom: 1px solid #ccc;
+        }
+
+
+        .explore-row h3 {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+        }
+
+
+        .explore-row span {
+            color: #777;
+
+            font-size: 0.9rem;
+        }
+
+
+
+        /* =========================================================
+           13. FOOTER
+        ========================================================= */
+
+        footer {
+            background: #111;
+
+            color: white;
+
+            padding: 110px 8% 40px;
+        }
+
+
+        .footer-inner {
+            max-width: 1250px;
+
+            margin: 0 auto;
+        }
+
+
+        .footer-small {
+            color: #888;
+
+            text-transform: uppercase;
+
+            letter-spacing: 4px;
+
+            font-size: 0.75rem;
+
+            margin-bottom: 20px;
+        }
+
+
+        footer h2 {
+            font-size: clamp(3.5rem, 8vw, 8rem);
+
+            letter-spacing: -6px;
+
+            line-height: 0.9;
+
+            max-width: 1000px;
+
+            margin-bottom: 50px;
+        }
+
+
+        footer h2 span {
+            color: #818cf8;
+        }
+
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+
+            padding-top: 25px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            color: #888;
+
+            font-size: 0.85rem;
+        }
+
+
+
+        /* =========================================================
+           14. RESPONSIVE / MOBILE
+        ========================================================= */
+
+        @media (max-width: 800px) {
 
             .navbar {
                 width: calc(100% - 40px);
-
-                padding-top: 25px;
             }
 
 
             .nav-links {
-                gap: 16px;
+                gap: 15px;
             }
 
 
-            .nav-links a {
-                font-size: 0.9rem;
-            }
+            .hero {
+                padding-left: 20px;
 
-
-            .profile-pic {
-                width: 180px;
-                height: 180px;
+                padding-right: 20px;
             }
 
 
             .hero h1 {
-                font-size: 3rem;
+                letter-spacing: -3px;
             }
 
 
-            .roles {
-                font-size: 1rem;
+            .photo-note {
+                display: none;
             }
 
 
-            .description {
-                font-size: 1rem;
+            .about-layout {
+                flex-direction: column;
+
+                gap: 40px;
+            }
+
+
+            .skill-grid {
+                flex-direction: column;
+            }
+
+
+            .project-grid {
+                flex-direction: column;
+            }
+
+
+            .project-card {
+                min-height: 350px;
             }
 
 
             .section {
-                padding: 80px 25px;
+                padding: 90px 25px;
             }
 
 
-            .section h2 {
-                font-size: 2.4rem;
+            .big-heading {
+                letter-spacing: -2px;
             }
 
 
-            .skill-container {
+            footer {
+                padding: 90px 25px 35px;
+            }
+
+
+            footer h2 {
+                letter-spacing: -3px;
+            }
+
+
+            .footer-bottom {
                 flex-direction: column;
             }
         }
+
 
     </style>
 
@@ -452,14 +962,22 @@
 <body>
 
 
-    <!-- ========================================
+    <!-- =====================================================
          HERO
-    ========================================= -->
+    ====================================================== -->
 
     <section class="hero" id="home">
 
 
-        <!-- NAVIGATION -->
+        <!-- Decorative circles -->
+
+        <div class="hero-circle-one"></div>
+
+        <div class="hero-circle-two"></div>
+
+
+
+        <!-- Navigation -->
 
         <nav class="navbar">
 
@@ -470,17 +988,11 @@
 
             <div class="nav-links">
 
-                <a href="#about">
-                    About
-                </a>
+                <a href="#about">About</a>
 
-                <a href="#skills">
-                    Skills
-                </a>
+                <a href="#skills">Skills</a>
 
-                <a href="#work">
-                    Work
-                </a>
+                <a href="#work">Work</a>
 
             </div>
 
@@ -488,22 +1000,32 @@
 
 
 
-        <!-- HERO CONTENT -->
+        <!-- Hero Content -->
 
         <div class="hero-content">
 
 
-            <!-- PROFILE PICTURE -->
+            <div class="profile-wrapper">
 
-            <img
-                class="profile-pic"
-                src="Profile_Pic_YURRRR.jpg"
-                alt="Justin Webster"
-            >
+                <!--
+                    IMPORTANT:
+                    We are keeping the exact image filename
+                    that is currently working.
+                -->
+
+                <img
+                    class="profile-pic"
+                    src="Profile_Pic_YURRRR.jpg"
+                    alt="Justin Webster"
+                >
+
+                <span class="photo-note">
+                    yep, that's me ↗
+                </span>
+
+            </div>
 
 
-
-            <!-- INTRO -->
 
             <p class="intro">
                 HELLO, I'M
@@ -511,62 +1033,50 @@
 
 
 
-            <!-- NAME -->
-
             <h1>
                 Justin Webster
             </h1>
 
 
 
-            <!-- ROLES -->
-
             <div class="roles">
 
-                <span>
-                    Computer Science Student
-                </span>
+                <span>Computer Science Student</span>
 
-                <span class="plus">
-                    +
-                </span>
+                <span class="plus">+</span>
 
-                <span>
-                    Graphic Designer
-                </span>
+                <span>Graphic Designer</span>
 
-                <span class="plus">
-                    +
-                </span>
+                <span class="plus">+</span>
 
-                <span>
-                    Music Producer
-                </span>
+                <span>Music Producer</span>
 
             </div>
 
 
-
-            <!-- DESCRIPTION -->
 
             <p class="description">
 
-                I love combining creativity and technology through graphic design,
-                digital artwork, music production, audio engineering, and web
-                development. Every project is an opportunity to learn something
-                new and create something meaningful.
+                I love combining creativity and technology through graphic
+                design, digital artwork, music production, audio engineering,
+                and web development. Every project is an opportunity to learn
+                something new and create something meaningful.
 
             </p>
 
 
 
-            <!-- BUTTON -->
+            <div class="hero-buttons">
 
-            <a class="work-button" href="#work">
+                <a class="button-primary" href="#work">
+                    See My Work ↓
+                </a>
 
-                View My Work ↓
+                <a class="button-secondary" href="#about">
+                    More About Me
+                </a>
 
-            </a>
+            </div>
 
 
         </div>
@@ -576,119 +1086,557 @@
 
 
 
-    <!-- ========================================
+
+    <!-- =====================================================
          ABOUT
-    ========================================= -->
+    ====================================================== -->
 
-    <section class="section" id="about">
+    <section class="section about" id="about">
+
 
         <div class="section-inner">
 
-            <h2>
-                About Me
+
+            <div class="section-label">
+                01 / About
+            </div>
+
+
+
+            <h2 class="big-heading">
+                More than just code.
             </h2>
 
 
-            <p class="section-text">
 
-                I'm a computer science student and creative who enjoys exploring
-                the space between technology, design, and music.
-
-            </p>
-
-        </div>
-
-    </section>
+            <div class="about-layout">
 
 
+                <p class="about-statement">
+
+                    I make things somewhere between
+
+                    <span>
+                        code, sound, and design.
+                    </span>
+
+                </p>
 
 
-    <!-- ========================================
-         SKILLS
-    ========================================= -->
 
-    <section class="section" id="skills">
-
-        <div class="section-inner">
-
-            <h2>
-                Skills
-            </h2>
-
-
-            <div class="skill-container">
-
-
-                <div class="skill-card">
-
-                    <h3>
-                        Development
-                    </h3>
+                <div class="about-copy">
 
                     <p>
-                        HTML, CSS, programming, and web development.
+
+                        I'm a computer science student and creative who enjoys
+                        exploring the space between technology, design, and music.
+
                     </p>
 
-                </div>
-
-
-
-                <div class="skill-card">
-
-                    <h3>
-                        Design
-                    </h3>
 
                     <p>
-                        Graphic design, digital artwork, and visual experimentation.
+
+                        Whether I'm building a website, creating digital artwork,
+                        or producing music, I'm interested in how small creative
+                        decisions can turn an idea into something people actually
+                        remember.
+
                     </p>
 
-                </div>
 
-
-
-                <div class="skill-card">
-
-                    <h3>
-                        Music
-                    </h3>
-
-                    <p>
-                        Music production, audio engineering, and sound design.
-                    </p>
+                    <span class="tiny-note">
+                        always making something →
+                    </span>
 
                 </div>
 
 
             </div>
 
+
         </div>
+
 
     </section>
 
 
 
 
-    <!-- ========================================
-         WORK
-    ========================================= -->
 
-    <section class="section" id="work">
+    <!-- =====================================================
+         SKILLS
+    ====================================================== -->
+
+    <section class="section skills" id="skills">
+
 
         <div class="section-inner">
 
-            <h2>
-                My Work
+
+            <div class="section-label">
+                02 / What I Do
+            </div>
+
+
+
+            <h2 class="big-heading">
+                A little bit of everything.
             </h2>
 
 
-            <p class="section-text">
-                Projects coming soon.
-            </p>
+
+            <div class="skill-grid">
+
+
+                <!-- DEVELOPMENT -->
+
+                <article class="skill-card">
+
+                    <span class="skill-number">
+                        01
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Development
+                        </h3>
+
+
+                        <p>
+
+                            Building websites and learning how design
+                            translates into functional digital experiences.
+
+                        </p>
+
+
+                        <div class="skill-tags">
+
+                            <span>HTML</span>
+
+                            <span>CSS</span>
+
+                            <span>Programming</span>
+
+                            <span>Web Design</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- DESIGN -->
+
+                <article class="skill-card">
+
+                    <span class="skill-number">
+                        02
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Graphic Design
+                        </h3>
+
+
+                        <p>
+
+                            Exploring visual ideas through typography,
+                            composition, digital artwork, and experimentation.
+
+                        </p>
+
+
+                        <div class="skill-tags">
+
+                            <span>Graphic Design</span>
+
+                            <span>Digital Art</span>
+
+                            <span>Typography</span>
+
+                            <span>Visual Design</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- MUSIC -->
+
+                <article class="skill-card">
+
+                    <span class="skill-number">
+                        03
+                    </span>
+
+
+                    <div>
+
+                        <h3>
+                            Music + Audio
+                        </h3>
+
+
+                        <p>
+
+                            Producing music and experimenting with recording,
+                            mixing, audio engineering, and sound design.
+
+                        </p>
+
+
+                        <div class="skill-tags">
+
+                            <span>Production</span>
+
+                            <span>Mixing</span>
+
+                            <span>Audio</span>
+
+                            <span>Sound Design</span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
 
         </div>
 
+
     </section>
+
+
+
+
+
+    <!-- =====================================================
+         SELECTED WORK
+    ====================================================== -->
+
+    <section class="section work" id="work">
+
+
+        <div class="section-inner">
+
+
+            <div class="section-label">
+                03 / Selected Work
+            </div>
+
+
+
+            <h2 class="big-heading">
+                Things I've made.
+            </h2>
+
+
+            <p class="work-intro">
+
+                A collection of projects across design, development,
+                digital art, and music. I'm still building this collection
+                as I learn and experiment.
+
+            </p>
+
+
+
+            <div class="project-grid">
+
+
+                <!-- PROJECT ONE -->
+
+                <article class="project-card project-blue">
+
+
+                    <span class="project-type">
+                        Web Development
+                    </span>
+
+
+                    <h3>
+                        This Portfolio
+                    </h3>
+
+
+                    <div class="project-bottom">
+
+                        <p>
+
+                            Designing and developing a personal portfolio
+                            from scratch using HTML and CSS.
+
+                        </p>
+
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- PROJECT TWO -->
+
+                <article class="project-card project-yellow">
+
+
+                    <span class="project-type">
+                        Graphic Design
+                    </span>
+
+
+                    <h3>
+                        Digital Artwork
+                    </h3>
+
+
+                    <div class="project-bottom">
+
+                        <p>
+
+                            Visual experiments exploring composition,
+                            typography, color, and digital design.
+
+                        </p>
+
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- PROJECT THREE -->
+
+                <article class="project-card project-purple">
+
+
+                    <span class="project-type">
+                        Music Production
+                    </span>
+
+
+                    <h3>
+                        Music + Sound
+                    </h3>
+
+
+                    <div class="project-bottom">
+
+                        <p>
+
+                            Original music production and audio experiments
+                            focused on sound, texture, and atmosphere.
+
+                        </p>
+
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                </article>
+
+
+
+                <!-- PROJECT FOUR -->
+
+                <article class="project-card project-light">
+
+
+                    <span class="project-type">
+                        Ongoing Experiments
+                    </span>
+
+
+                    <h3>
+                        What's Next?
+                    </h3>
+
+
+                    <div class="project-bottom">
+
+                        <p>
+
+                            New projects, experiments, and ideas are
+                            constantly being added as I keep learning.
+
+                        </p>
+
+
+                        <span class="arrow">
+                            ↗
+                        </span>
+
+                    </div>
+
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- =====================================================
+         CURRENTLY EXPLORING
+    ====================================================== -->
+
+    <section class="section exploring">
+
+
+        <div class="section-inner">
+
+
+            <div class="section-label">
+                04 / Currently Exploring
+            </div>
+
+
+
+            <h2 class="big-heading">
+                Still learning.
+            </h2>
+
+
+
+            <div class="explore-row">
+
+                <h3>
+                    Creative Web Development
+                </h3>
+
+                <span>
+                    HTML / CSS / UI
+                </span>
+
+            </div>
+
+
+
+            <div class="explore-row">
+
+                <h3>
+                    Digital Design
+                </h3>
+
+                <span>
+                    Art / Typography / Layout
+                </span>
+
+            </div>
+
+
+
+            <div class="explore-row">
+
+                <h3>
+                    Music Production
+                </h3>
+
+                <span>
+                    Production / Audio / Sound
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+
+        <div class="footer-inner">
+
+
+            <p class="footer-small">
+                Thanks for stopping by
+            </p>
+
+
+
+            <h2>
+
+                Let's make something
+
+                <span>
+                    interesting.
+                </span>
+
+            </h2>
+
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    Justin Webster
+                </span>
+
+
+                <span>
+                    Computer Science × Design × Music
+                </span>
+
+
+                <span>
+                    © 2026
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </footer>
 
 
 </body>
