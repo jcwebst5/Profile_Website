@@ -12,7 +12,7 @@
 
     <!-- =========================================================
          GOOGLE MATERIAL SYMBOLS
-         Icons from: https://fonts.google.com/icons
+         Icons from Google Fonts
     ========================================================== -->
 
     <link
@@ -41,11 +41,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-
             background: #f7f7f2;
-
             color: #111111;
-
             overflow-x: hidden;
         }
 
@@ -245,12 +242,7 @@
         }
 
 
-        /*
-            Handwritten note beside the portrait.
-
-            The note now begins AFTER the right side of the image,
-            so it will not disappear behind the photo.
-        */
+        /* Handwritten note beside the portrait */
 
         .photo-note {
             position: absolute;
@@ -280,23 +272,14 @@
         }
 
 
-        /*
-            Material Symbol arrow used with
-            the handwritten portrait note.
-        */
+        /* Google arrow beside portrait note */
 
         .photo-arrow {
             font-size: 18px;
         }
 
 
-        /*
-            Small Material Symbol sparkle.
-
-            This helps make the portrait feel like
-            a designed composition rather than just
-            an image floating above the heading.
-        */
+        /* Google sparkle beside portrait */
 
         .profile-sparkle {
             position: absolute;
@@ -441,11 +424,6 @@
             transform: translateY(-4px);
         }
 
-
-        /*
-            Google Material icon inside the
-            "See My Work" button.
-        */
 
         .button-icon {
             font-size: 18px;
@@ -653,12 +631,40 @@
         }
 
 
+        /*
+            Top row of each skill card.
+            Number on left, Google icon on right.
+        */
+
+        .skill-top {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
         .skill-number {
             color: #777;
 
             font-size: 0.8rem;
 
             letter-spacing: 3px;
+        }
+
+
+        /*
+            Google Material icons for the skills:
+            code / palette / headphones
+        */
+
+        .skill-icon {
+            font-size: 30px;
+
+            color: #a5b4fc;
+
+            opacity: 0.9;
         }
 
 
@@ -834,6 +840,11 @@
         }
 
 
+        /*
+            These are now Google Material north_east icons
+            instead of normal typed arrow characters.
+        */
+
         .arrow {
             font-size: 2rem;
 
@@ -986,11 +997,6 @@
             }
 
 
-            /*
-                Hide the handwritten note on smaller screens
-                so it cannot run off the edge of the phone.
-            */
-
             .photo-note {
                 display: none;
             }
@@ -1101,21 +1107,17 @@
         <div class="hero-content">
 
 
-            <!-- =================================================
-                 PROFILE PICTURE
-            ================================================== -->
+            <!-- Profile Picture -->
 
             <div class="profile-wrapper">
 
 
-                <!-- Google Material sparkle -->
+                <!-- GOOGLE MATERIAL SYMBOL: SPARKLE -->
 
                 <span class="material-symbols-outlined profile-sparkle">
                     auto_awesome
                 </span>
 
-
-                <!-- Profile picture -->
 
                 <img
                     class="profile-pic"
@@ -1124,11 +1126,11 @@
                 >
 
 
-                <!-- Handwritten portrait annotation -->
-
                 <span class="photo-note">
 
                     yep, that's me
+
+                    <!-- GOOGLE MATERIAL SYMBOL: ARROW -->
 
                     <span class="material-symbols-outlined photo-arrow">
                         north_west
@@ -1187,7 +1189,7 @@
 
                     See My Work
 
-                    <!-- Google Material arrow -->
+                    <!-- GOOGLE MATERIAL SYMBOL: DOWN ARROW -->
 
                     <span class="material-symbols-outlined button-icon">
                         arrow_downward
@@ -1313,13 +1315,27 @@
             <div class="skill-grid">
 
 
-                <!-- DEVELOPMENT -->
+                <!-- =================================================
+                     DEVELOPMENT
+                ================================================== -->
 
                 <article class="skill-card">
 
-                    <span class="skill-number">
-                        01
-                    </span>
+
+                    <div class="skill-top">
+
+                        <span class="skill-number">
+                            01
+                        </span>
+
+
+                        <!-- GOOGLE MATERIAL SYMBOL: CODE -->
+
+                        <span class="material-symbols-outlined skill-icon">
+                            code
+                        </span>
+
+                    </div>
 
 
                     <div>
@@ -1355,13 +1371,27 @@
 
 
 
-                <!-- DESIGN -->
+                <!-- =================================================
+                     GRAPHIC DESIGN
+                ================================================== -->
 
                 <article class="skill-card">
 
-                    <span class="skill-number">
-                        02
-                    </span>
+
+                    <div class="skill-top">
+
+                        <span class="skill-number">
+                            02
+                        </span>
+
+
+                        <!-- GOOGLE MATERIAL SYMBOL: PALETTE -->
+
+                        <span class="material-symbols-outlined skill-icon">
+                            palette
+                        </span>
+
+                    </div>
 
 
                     <div>
@@ -1397,13 +1427,27 @@
 
 
 
-                <!-- MUSIC -->
+                <!-- =================================================
+                     MUSIC + AUDIO
+                ================================================== -->
 
                 <article class="skill-card">
 
-                    <span class="skill-number">
-                        03
-                    </span>
+
+                    <div class="skill-top">
+
+                        <span class="skill-number">
+                            03
+                        </span>
+
+
+                        <!-- GOOGLE MATERIAL SYMBOL: HEADPHONES -->
+
+                        <span class="material-symbols-outlined skill-icon">
+                            headphones
+                        </span>
+
+                    </div>
 
 
                     <div>
@@ -1509,8 +1553,10 @@
                         </p>
 
 
-                        <span class="arrow">
-                            ↗
+                        <!-- GOOGLE MATERIAL SYMBOL -->
+
+                        <span class="material-symbols-outlined arrow">
+                            north_east
                         </span>
 
                     </div>
@@ -1545,8 +1591,10 @@
                         </p>
 
 
-                        <span class="arrow">
-                            ↗
+                        <!-- GOOGLE MATERIAL SYMBOL -->
+
+                        <span class="material-symbols-outlined arrow">
+                            north_east
                         </span>
 
                     </div>
@@ -1581,8 +1629,10 @@
                         </p>
 
 
-                        <span class="arrow">
-                            ↗
+                        <!-- GOOGLE MATERIAL SYMBOL -->
+
+                        <span class="material-symbols-outlined arrow">
+                            north_east
                         </span>
 
                     </div>
@@ -1617,8 +1667,10 @@
                         </p>
 
 
-                        <span class="arrow">
-                            ↗
+                        <!-- GOOGLE MATERIAL SYMBOL -->
+
+                        <span class="material-symbols-outlined arrow">
+                            north_east
                         </span>
 
                     </div>
