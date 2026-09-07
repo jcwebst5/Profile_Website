@@ -10,6 +10,17 @@
     <title>Justin Webster | Creative Portfolio</title>
 
 
+    <!-- =========================================================
+         GOOGLE MATERIAL SYMBOLS
+         Icons from: https://fonts.google.com/icons
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    >
+
+
     <style>
 
         /* =========================================================
@@ -227,24 +238,81 @@
                 0 25px 70px rgba(0,0,0,0.25);
 
             transform: rotate(-2deg);
+
+            position: relative;
+
+            z-index: 2;
         }
 
+
+        /*
+            Handwritten note beside the portrait.
+
+            The note now begins AFTER the right side of the image,
+            so it will not disappear behind the photo.
+        */
 
         .photo-note {
             position: absolute;
 
-            right: -95px;
-            bottom: 15px;
+            left: calc(100% + 20px);
+            bottom: 18px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+            white-space: nowrap;
 
             font-family: Georgia, serif;
 
             font-style: italic;
 
-            font-size: 0.85rem;
+            font-size: 0.9rem;
 
-            transform: rotate(-6deg);
+            transform: rotate(-5deg);
 
-            color: rgba(255,255,255,0.8);
+            color: rgba(255,255,255,0.85);
+
+            z-index: 3;
+        }
+
+
+        /*
+            Material Symbol arrow used with
+            the handwritten portrait note.
+        */
+
+        .photo-arrow {
+            font-size: 18px;
+        }
+
+
+        /*
+            Small Material Symbol sparkle.
+
+            This helps make the portrait feel like
+            a designed composition rather than just
+            an image floating above the heading.
+        */
+
+        .profile-sparkle {
+            position: absolute;
+
+            left: -55px;
+            top: 15px;
+
+            font-size: 28px;
+
+            color: #fde047;
+
+            transform: rotate(-12deg);
+
+            opacity: 0.9;
+
+            z-index: 3;
         }
 
 
@@ -334,7 +402,13 @@
 
         .button-primary,
         .button-secondary {
-            display: inline-block;
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 4px;
 
             padding: 17px 28px;
 
@@ -365,6 +439,18 @@
         .button-primary:hover,
         .button-secondary:hover {
             transform: translateY(-4px);
+        }
+
+
+        /*
+            Google Material icon inside the
+            "See My Work" button.
+        */
+
+        .button-icon {
+            font-size: 18px;
+
+            margin-left: 3px;
         }
 
 
@@ -900,8 +986,18 @@
             }
 
 
+            /*
+                Hide the handwritten note on smaller screens
+                so it cannot run off the edge of the phone.
+            */
+
             .photo-note {
                 display: none;
+            }
+
+
+            .profile-sparkle {
+                left: -35px;
             }
 
 
@@ -1005,13 +1101,21 @@
         <div class="hero-content">
 
 
+            <!-- =================================================
+                 PROFILE PICTURE
+            ================================================== -->
+
             <div class="profile-wrapper">
 
-                <!--
-                    IMPORTANT:
-                    We are keeping the exact image filename
-                    that is currently working.
-                -->
+
+                <!-- Google Material sparkle -->
+
+                <span class="material-symbols-outlined profile-sparkle">
+                    auto_awesome
+                </span>
+
+
+                <!-- Profile picture -->
 
                 <img
                     class="profile-pic"
@@ -1019,9 +1123,19 @@
                     alt="Justin Webster"
                 >
 
+
+                <!-- Handwritten portrait annotation -->
+
                 <span class="photo-note">
-                    yep, that's me ↗
+
+                    yep, that's me
+
+                    <span class="material-symbols-outlined photo-arrow">
+                        north_west
+                    </span>
+
                 </span>
+
 
             </div>
 
@@ -1068,13 +1182,24 @@
 
             <div class="hero-buttons">
 
+
                 <a class="button-primary" href="#work">
-                    See My Work ↓
+
+                    See My Work
+
+                    <!-- Google Material arrow -->
+
+                    <span class="material-symbols-outlined button-icon">
+                        arrow_downward
+                    </span>
+
                 </a>
+
 
                 <a class="button-secondary" href="#about">
                     More About Me
                 </a>
+
 
             </div>
 
